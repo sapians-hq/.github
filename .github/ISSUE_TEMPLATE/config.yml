@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Handbook do golden path
+    url: https://github.com/wbendinelli/sapians-platform/blob/main/handbook/golden-path.md
+    about: O padrão de engenharia SAPIANS — tiers, gates e o porquê de cada decisão.
+  - name: Reportar vulnerabilidade
+    url: https://github.com/sapians-hq/.github/blob/main/SECURITY.md
+    about: Problemas de segurança não entram como issue pública.
