@@ -1,11 +1,11 @@
 <h1 align="center">SAPIANS</h1>
 
 <p align="center">
-  <em>AI architecture, software engineering, and applied research.</em>
+  <em>XRESET — avaliação ocupacional de desgaste.<br/>Engenharia e pesquisa aplicada da SAPIANS.</em>
 </p>
 
 <p align="center">
-  <a href="https://sapians.com.br">sapians.com.br</a> ·
+  <a href="https://xreset.sapians.com.br">xreset.sapians.com.br</a> ·
   <a href="mailto:hello@sapians.com.br">hello@sapians.com.br</a> ·
   Piracicaba, SP — Brazil
 </p>
