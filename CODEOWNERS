@@ -1,0 +1,3 @@
+# Default org-wide para sapians-hq.
+# Repositórios podem sobrescrever com seu próprio .github/CODEOWNERS.
+* @wbendinelli
