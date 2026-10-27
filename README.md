@@ -1,52 +1,48 @@
 # .github
 
-Community health files e defaults de organização para **sapians-hq**.
+[![Docs lint](https://github.com/sapians-hq/.github/actions/workflows/docs-lint.yml/badge.svg)](https://github.com/sapians-hq/.github/actions/workflows/docs-lint.yml)
+[![Release](https://img.shields.io/badge/releases-GitHub-blue)](https://github.com/sapians-hq/.github/releases)
 
 > **Tier:** `D` · **Classe:** `Config`
 
 ## O que é
 
-Este repositório fornece, por herança, o que todo repositório da organização usa
-sem precisar copiar: templates de issue e pull request, `CODEOWNERS` padrão,
-política de segurança, e o perfil público da organização.
+Este repositório mantém o [overview público](profile/README.md), o [contrato documental](docs/padrao-de-repositorios.md) e os arquivos comunitários da `sapians-hq`. A implementação dos workflows compartilhados fica em [wbendinelli/.github](https://github.com/wbendinelli/.github), com versões próprias.
 
-Um repositório que quiser divergir declara o seu próprio arquivo — o local
-sempre vence o herdado.
+| Caminho | Papel |
+| --- | --- |
+| `profile/README.md` | Overview público da organização |
+| `.github/ISSUE_TEMPLATE/` e `.github/PULL_REQUEST_TEMPLATE.md` | Templates comunitários, sujeitos às regras de herança do GitHub e aos arquivos locais de cada projeto |
+| `SECURITY.md` e `CONTRIBUTING.md` | Canal de segurança e percurso geral de contribuição |
+| `CODEOWNERS` | Propriedade deste repositório; não instala revisores automaticamente nos demais |
+| `.sapians-repo.yml` | Classe, tier e descrição desta unidade |
+| `docs/padrao-de-repositorios.md` | Estrutura e manutenção de README, About, topics e releases |
 
-## O que vive aqui
+## Como consumir
 
-| Caminho | Efeito |
-| :--- | :--- |
-| `profile/README.md` | Página pública da organização em github.com/sapians-hq |
-| `.github/ISSUE_TEMPLATE/` | Templates de issue em todos os repos da org |
-| `.github/PULL_REQUEST_TEMPLATE.md` | Template de PR em todos os repos da org |
-| `CODEOWNERS` | Revisor padrão quando o repo não define o seu |
-| `SECURITY.md` | Política de divulgação de vulnerabilidade |
-
-## Como consumir os reusable workflows
-
-Os workflows de CI compartilhados **não vivem aqui** — vivem em
-[`wbendinelli/.github`](https://github.com/wbendinelli/.github), que é público e
-por isso pode ser chamado de qualquer organização.
+Para entender a organização, comece pelo overview e pelo README do projeto. Para engenharia, adote o perfil derivado da classe em `.sapians-repo.yml`, confira os templates e use o validador central fixado:
 
 ```yaml
 jobs:
-  ci:
-    uses: wbendinelli/.github/.github/workflows/ci-node.yml@v0.3.0
-  brand:
-    uses: wbendinelli/.github/.github/workflows/brand-lint.yml@v0.3.0
+  docs:
+    uses: wbendinelli/.github/.github/workflows/docs-lint.yml@v0.8.1
+    with:
+      config-ref: v0.8.1
 ```
 
-Disponíveis: `ci-node` · `ci-python` · `ci-python-uv` · `ci-terraform` ·
-`security` · `brand-lint` · `release-please` · `lint`.
+O pin de `uses` e `config-ref` precisa coincidir. Outros workflows conservam os contratos e pins próprios dos consumidores; atualizar documentação não autoriza modificar infraestrutura ou ambiente servido. A autoridade sobre método, marca, contratos e dados continua no repositório responsável.
 
-**Sempre pinar em tag**, nunca em `@main` — um bump no repo central não deve
-quebrar CI de produção sem aviso.
+## Versionamento
 
-## O padrão, e onde ele é decidido
+`version.txt`, manifesto e configuração de release identificam as versões deste conjunto de perfil, templates e documentação. A primeira versão organizada é `0.1.0`. Releases apontam para commits aceitos na main e descrevem o recorte entregue; não atestam publicação de produtos.
 
-Este repositório é a camada **executável**. O *porquê* — tiers, contratos de CI
-por tier, política de gate — vive no handbook em
-[`sapians-platform`](https://github.com/wbendinelli/sapians-platform/blob/main/handbook/golden-path.md).
+O fluxo de release prepara uma PR de versão/changelog; a publicação exige integração revisada e checks. Os releases do golden path `wbendinelli/.github` e dos produtos são independentes. O [padrão](docs/padrao-de-repositorios.md) detalha as regras; as fontes anteriores estão no [legado](docs/legado/2026-10-27-perfil-anterior/README.md).
 
-Mudança de padrão é ADR + edição central, nunca cópia repo a repo.
+## Links
+
+- [Overview](profile/README.md) e [política documental](docs/padrao-de-repositorios.md).
+- [Golden path v0.8.1](https://github.com/wbendinelli/.github/tree/v0.8.1).
+- [Handbook](https://github.com/sapians-hq/sapians-handbook).
+- [Segurança](SECURITY.md) e [releases](https://github.com/sapians-hq/.github/releases).
+
+A herança dos arquivos comunitários segue a [lista e precedência oficiais do GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file). Licenças e CODEOWNERS conservam seu escopo local.

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "source_repository": "sapians-hq/.github",
+  "source_commit": "bfb7595905c710129bb2e93e5bccd912857dc6a6",
+  "reason": "Mapa público e instruções substituídos por overview e contrato documental atuais.",
+  "files": [
+    {
+      "source": "README.md",
+      "source_sha256": "e54f6324a16acbcecf6c75f9812b1baddf8021f6f9eb451e605041da99dd6ac6",
+      "archive": "README.md.txt",
+      "successor": "README.md"
+    },
+    {
+      "source": "profile/README.md",
+      "source_sha256": "2d8c5b32d6da999d65271665151e5cce83162db290f45c4f1dae4b0ca3c3b729",
+      "archive": "profile-README.md.txt",
+      "successor": "profile/README.md"
+    }
+  ]
+}
