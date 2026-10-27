@@ -1,6 +1,6 @@
 # Padrão dos repositórios SAPIANS
 
-A estrutura comum deve ajudar uma pessoa a localizar a fonte editável, preparar uma contribuição e interpretar a versão recebida. O padrão executável é o [golden path v0.8.0](https://github.com/wbendinelli/.github/tree/v0.8.0), identificado pelo commit `9a1212d9df466988781b0b3c4285d5dc61f58ea6`. Os perfis vêm de `doclint/config.json`; este guia não cria um schema paralelo.
+A estrutura comum deve ajudar uma pessoa a localizar a fonte editável, preparar uma contribuição e interpretar a versão recebida. O padrão executável é o [golden path v0.8.1](https://github.com/wbendinelli/.github/tree/v0.8.1), identificado pelo commit `a6ad702ae3d2a7c4fdaaad5a87ec2c6d26a2136e`. Os perfis vêm de `doclint/config.json`; este guia não cria um schema paralelo.
 
 ## README por classe
 
@@ -32,7 +32,7 @@ Releases existentes preservam seu contexto. Quando ainda não há release, a pri
 
 - README e `.sapians-repo.yml` coerentes com código e documentação.
 - About, website e topics coerentes com essas fontes.
-- Caller `docs-lint.yml` com ferramenta e regras na mesma tag `v0.8.0`.
+- Caller `docs-lint.yml` com ferramenta e regras na mesma tag `v0.8.1`.
 - Links locais válidos; badges apontando para workflows, licenças e releases reais.
 - Release/tag e manifesto coerentes com a unidade versionada; main posterior identificada.
 - Legado com origem, SHA-256, sucessor e arquivos brutos fora dos parsers ativos.

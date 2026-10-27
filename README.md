@@ -1,7 +1,7 @@
 # .github
 
 [![Docs lint](https://github.com/sapians-hq/.github/actions/workflows/docs-lint.yml/badge.svg)](https://github.com/sapians-hq/.github/actions/workflows/docs-lint.yml)
-[![Release](https://img.shields.io/github/v/release/sapians-hq/.github?include_prereleases)](https://github.com/sapians-hq/.github/releases)
+[![Release](https://img.shields.io/badge/releases-GitHub-blue)](https://github.com/sapians-hq/.github/releases)
 
 > **Tier:** `D` · **Classe:** `Config`
 
@@ -25,9 +25,9 @@ Para entender a organização, comece pelo overview e pelo README do projeto. Pa
 ```yaml
 jobs:
   docs:
-    uses: wbendinelli/.github/.github/workflows/docs-lint.yml@v0.8.0
+    uses: wbendinelli/.github/.github/workflows/docs-lint.yml@v0.8.1
     with:
-      config-ref: v0.8.0
+      config-ref: v0.8.1
 ```
 
 O pin de `uses` e `config-ref` precisa coincidir. Outros workflows conservam os contratos e pins próprios dos consumidores; atualizar documentação não autoriza modificar infraestrutura ou ambiente servido. A autoridade sobre método, marca, contratos e dados continua no repositório responsável.
@@ -41,7 +41,7 @@ O fluxo de release prepara uma PR de versão/changelog; a publicação exige int
 ## Links
 
 - [Overview](profile/README.md) e [política documental](docs/padrao-de-repositorios.md).
-- [Golden path v0.8.0](https://github.com/wbendinelli/.github/tree/v0.8.0).
+- [Golden path v0.8.1](https://github.com/wbendinelli/.github/tree/v0.8.1).
 - [Handbook](https://github.com/sapians-hq/sapians-handbook).
 - [Segurança](SECURITY.md) e [releases](https://github.com/sapians-hq/.github/releases).
 
