@@ -1,78 +1,43 @@
-<h1 align="center">SAPIANS</h1>
+# SAPIANS
 
-<p align="center">
-  <strong>Instruments for occupational self-assessment, and the research behind them.</strong>
-</p>
+**Tecnologia e inteligência artificial para compreender melhor o contexto humano.**
 
-<p align="center">
-  <a href="https://xreset.sapians.com.br">xreset.sapians.com.br</a>
-  ·
-  <a href="mailto:hello@sapians.com.br">hello@sapians.com.br</a>
-  ·
-  São Paulo, Brazil
-</p>
+A SAPIANS é uma healthtech nativa em IA. Trabalhamos com auto-observação, bem-estar e saúde mental, aproximando inteligência humana e artificial. Nosso princípio é **leveza com rigor**.
 
----
+## Experiências e tecnologia
 
-## What we work on
+**XRESET** é a experiência de auto-observação do bem-estar no trabalho. **VITA** é a inteligência artificial conversacional da SAPIANS: suas bibliotecas de núcleo, interface e agente compõem as experiências dos produtos.
 
-Two strands, deliberately kept close together.
+O ecossistema reúne aplicações, serviços, fontes de conhecimento e documentação com responsabilidades explícitas. Versão do código, publicação de um serviço e avaliação de uma experiência têm evidências próprias.
 
-**Instruments.** Structured self-assessments people complete on their own,
-which return a reading of their own answers rather than a verdict about them.
-Our current instrument is **XRESET**: about twenty minutes, organised around
-three dimensions — Vitality, Connection, Freedom — ending in a written reading
-and a prioritised plan for the next ninety days.
+## Mapa dos repositórios
 
-**Research.** Formal models of how occupational strain accumulates and
-resolves over time. This work is published openly and stands on its own,
-independent of the products.
+| Repositório | Responsabilidade |
+| --- | --- |
+| [sapians-vita](https://github.com/sapians-hq/sapians-vita) | Bibliotecas de núcleo, browser, interface e Python do VITA |
+| [sapians-api](https://github.com/sapians-hq/sapians-api) | Serviço de API, recuperação de conhecimento e integração dos agentes |
+| [sapians-docs](https://github.com/sapians-hq/sapians-docs) | Plataforma documental, método e geração de conteúdo derivado |
+| [sapians-corpus](https://github.com/sapians-hq/sapians-corpus) | Bases de conhecimento versionadas, origens e instrumentos editoriais |
+| [sapians-auth](https://github.com/sapians-hq/sapians-auth) | Serviço de identidade e contratos de autenticação |
+| [sapians-infra](https://github.com/sapians-hq/sapians-infra) | Infraestrutura declarada como código |
+| [sapians-handbook](https://github.com/sapians-hq/sapians-handbook) | Manual de trabalho, decisões e orientação da equipe |
+| [sapians-privacy-policy](https://github.com/sapians-hq/sapians-privacy-policy) | Portal de privacidade e documentos jurídicos |
+| [sapians-landingpage](https://github.com/sapians-hq/sapians-landingpage) | Código da presença institucional na web |
+| [sapians-digital](https://github.com/sapians-hq/sapians-digital) | Kit de instruções e referências para produção e operação editorial |
+| [.github](https://github.com/sapians-hq/.github) | Este overview, padrões documentais e arquivos comunitários |
 
-We do not describe our instruments as diagnostic, and we do not claim they
-detect clinical conditions. They are structured observation tools. Where
-evidence exists we cite it; where it does not, we say so.
+O código do **[XRESET](https://github.com/wbendinelli/sapians-xreset)** é mantido em seu repositório próprio. A experiência está em [xreset.sapians.com.br](https://xreset.sapians.com.br).
 
-## Repositories
+A maior parte dos repositórios técnicos tem acesso privado. Os links abrem conforme as permissões de cada pessoa.
 
-| Repository | What it is |
-| :--- | :--- |
-| [`sapians-xreset`](https://github.com/sapians-hq/sapians-xreset) | The XRESET application — assessment flow, reading engine, and delivery. Next.js · Supabase. |
-| [`.github`](https://github.com/sapians-hq/.github) | This profile, shared CI workflows, and community health files. |
+## Como começar
 
-Research artefacts — including **DLVT**, a dynamical-systems model of
-executive sustainability — are published separately and linked from each
-paper.
+Leia o README do projeto: ele identifica finalidade, classe, tier, dependências, comandos, versão e fontes de documentação. Depois, siga seu guia de contribuição e os contratos dos consumidores envolvidos.
 
-## How this organisation is run
+O [padrão documental da organização](https://github.com/sapians-hq/.github/blob/main/docs/padrao-de-repositorios.md) mantém uma estrutura comum por tipo de projeto. Os validadores vêm do [golden path de engenharia](https://github.com/wbendinelli/.github). Materiais substituídos preservam origem e sucessor no legado.
 
-Every repository declares its tier in `.sapians-repo.yml`. The tier sets the
-support and CI contract, so the guarantees a repository offers are legible
-before you read a line of its code.
+## Contato e segurança
 
-| Tier | Meaning |
-| :--- | :--- |
-| **A** | Production systems — supported, released, versioned |
-| **B** | Client engagements — private, contract-scoped |
-| **I** | Internal tooling and shared infrastructure |
-| **C** | Research and teaching artefacts — papers, lectures, datasets |
-| **D** | Drafts and experiments — no stability guarantees |
+Para colaboração e contato institucional: [hello@sapians.com.br](mailto:hello@sapians.com.br).
 
-Conventions that hold across all tiers:
-
-- Default branch is `main`; releases follow semantic versioning
-- CI is composed from reusable workflows in [`wbendinelli/.github`](https://github.com/wbendinelli/.github)
-- Secret scanning with push protection, Dependabot alerts, and the dependency
-  graph are enabled by default on every new repository
-
-## Contact
-
-For collaboration, research enquiries, or anything concerning this
-organisation: [hello@sapians.com.br](mailto:hello@sapians.com.br).
-
-Security reports go to the same address, or through GitHub's private
-vulnerability reporting on the affected repository. Please do not open a
-public issue for security problems — see [`SECURITY.md`](https://github.com/sapians-hq/.github/blob/main/SECURITY.md).
-
-<p align="center">
-  <sub>SAPIANS Estúdio de Soluções em Negócios Ltda · São Paulo, Brazil</sub>
-</p>
+Vulnerabilidades seguem o canal privado e a [política de segurança](https://github.com/sapians-hq/.github/blob/main/SECURITY.md).
